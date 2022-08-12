@@ -18,4 +18,21 @@ let numbersAny: any[] = []
 
 numbers.forEach(n => n.toLocaleString)
 
-// Tuples = Картежи
+// Tuples = кортежи
+// Массив фиксированной длины, где каждый эл-т имеет опр тип
+
+let user: [number, string] = [1, 'Mosh'] // in JS Tuples is Array
+
+user.push(1); // Problem in TS(Так как кортежи имеют фиксированную длину)
+
+// Enums перечисления
+// Список связанных констант
+
+const small = 1;
+const medium = 2;
+const large = 3;
+
+// PascalCase first letter uppercase
+const enum Size {Small = 1, Medium, Large}
+let mySize: Size = Size.Medium;
+console.log(mySize);
